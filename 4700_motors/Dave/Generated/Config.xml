@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Project MotherSystem_Version="" Name="4700_motors" Path="D:\ghc\4700_motors">
+<Project MotherSystem_Version="" Name="4700_motors" Path="D:\ghc\dave_project\4700_motors">
     <COMPILER>
         <Name>ARM_GCC_HOME</Name>
         <Version/>

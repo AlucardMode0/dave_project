@@ -1092,10 +1092,10 @@
  820              	.LFE152:
  822              	 .text
  823              	.Letext0:
- 824              	 .file 2 "d:\\dave4\\dave_4-4-2_32bit_2018-02-23\\dave-ide-4.4.2-32bit\\dave-ide-4.4.2-32bit\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
- 825              	 .file 3 "d:\\dave4\\dave_4-4-2_32bit_2018-02-23\\dave-ide-4.4.2-32bit\\dave-ide-4.4.2-32bit\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
- 826              	 .file 4 "D:/ghc/4700_motors/Libraries/XMCLib/inc/xmc_eru.h"
- 827              	 .file 5 "D:/ghc/4700_motors/Libraries/CMSIS/Include/core_cm4.h"
+ 824              	 .file 2 "c:\\users\\vere\\downloads\\dave_4-4-2_32bit_2018-02-23\\dave-ide-4.4.2-32bit\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 825              	 .file 3 "c:\\users\\vere\\downloads\\dave_4-4-2_32bit_2018-02-23\\dave-ide-4.4.2-32bit\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+ 826              	 .file 4 "D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc/xmc_eru.h"
+ 827              	 .file 5 "D:/ghc/dave_project/4700_motors/Libraries/CMSIS/Include/core_cm4.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 xmc_eru.c
     {standard input}:20     .text.XMC_ERU_ETL_Init:00000000 $t

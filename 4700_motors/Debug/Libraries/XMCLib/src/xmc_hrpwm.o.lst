@@ -17,9 +17,9 @@
   17              	.Ltext0:
   18              	 .cfi_sections .debug_frame
   19              	.Letext0:
-  20              	 .file 1 "d:\\dave4\\dave_4-4-2_32bit_2018-02-23\\dave-ide-4.4.2-32bit\\dave-ide-4.4.2-32bit\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
-  21              	 .file 2 "d:\\dave4\\dave_4-4-2_32bit_2018-02-23\\dave-ide-4.4.2-32bit\\dave-ide-4.4.2-32bit\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
-  22              	 .file 3 "D:/ghc/4700_motors/Libraries/CMSIS/Include/core_cm4.h"
+  20              	 .file 1 "c:\\users\\vere\\downloads\\dave_4-4-2_32bit_2018-02-23\\dave-ide-4.4.2-32bit\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+  21              	 .file 2 "c:\\users\\vere\\downloads\\dave_4-4-2_32bit_2018-02-23\\dave-ide-4.4.2-32bit\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+  22              	 .file 3 "D:/ghc/dave_project/4700_motors/Libraries/CMSIS/Include/core_cm4.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 xmc_hrpwm.c
 

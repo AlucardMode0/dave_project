@@ -36,7 +36,7 @@ void invarte_motoare_stangaC(uint32_t jumatati)
 	  uint32_t i=0,j=0;
 	  /* Placeholder for user application code. The while loop below can be replaced with user application code. */
 	  for(i=1;i<=jumatati;++i)
-		  for (j=0;j<25;j++)
+		  for (j=0;j<250;j++)
 		  {  	  delay();
 		  		//coil3=0;				// end step 3
 		  	//	coil1=1;

@@ -11,21 +11,21 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
   3 .debug_aranges 00000190  00000000  00000000  00008a90  2**3
                   CONTENTS, READONLY, DEBUGGING
-  4 .debug_info   000025f9  00000000  00000000  00008c20  2**0
+  4 .debug_info   00002606  00000000  00000000  00008c20  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_abbrev 000009da  00000000  00000000  0000b219  2**0
+  5 .debug_abbrev 000009da  00000000  00000000  0000b226  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_line   00001234  00000000  00000000  0000bbf3  2**0
+  6 .debug_line   000012b7  00000000  00000000  0000bc00  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_frame  000003ec  00000000  00000000  0000ce28  2**2
+  7 .debug_frame  000003ec  00000000  00000000  0000ceb8  2**2
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_str    00000e22  00000000  00000000  0000d214  2**0
+  8 .debug_str    00000e2f  00000000  00000000  0000d2a4  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_loc    000006e0  00000000  00000000  0000e036  2**0
+  9 .debug_loc    000006e0  00000000  00000000  0000e0d3  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_ranges 000000e8  00000000  00000000  0000e716  2**0
+ 10 .debug_ranges 000000e8  00000000  00000000  0000e7b3  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .build_attributes 0000020f  00000000  00000000  0000e7fe  2**0
+ 11 .build_attributes 0000020f  00000000  00000000  0000e89b  2**0
                   CONTENTS, READONLY
 
 Disassembly of section .text:
@@ -1441,7 +1441,7 @@ void invarte_motoare_stangaC(uint32_t jumatati)
  8000958:	2301      	movs	r3, #1
  800095a:	60fb      	str	r3, [r7, #12]
  800095c:	e02b      	b.n	80009b6 <invarte_motoare_stangaC+0x86>
-		  for (j=0;j<25;j++)
+		  for (j=0;j<250;j++)
  800095e:	2300      	movs	r3, #0
  8000960:	60bb      	str	r3, [r7, #8]
  8000962:	e022      	b.n	80009aa <invarte_motoare_stangaC+0x7a>
@@ -1492,12 +1492,12 @@ void invarte_motoare_stangaC(uint32_t jumatati)
 	  uint32_t i=0,j=0;
 	  /* Placeholder for user application code. The while loop below can be replaced with user application code. */
 	  for(i=1;i<=jumatati;++i)
-		  for (j=0;j<25;j++)
+		  for (j=0;j<250;j++)
  80009a4:	68bb      	ldr	r3, [r7, #8]
  80009a6:	3301      	adds	r3, #1
  80009a8:	60bb      	str	r3, [r7, #8]
  80009aa:	68bb      	ldr	r3, [r7, #8]
- 80009ac:	2b18      	cmp	r3, #24
+ 80009ac:	2bf9      	cmp	r3, #249	; 0xf9
  80009ae:	d9d9      	bls.n	8000964 <invarte_motoare_stangaC+0x34>
 	  DIGITAL_IO_SetOutputLow(&coil2);
 	  DIGITAL_IO_SetOutputLow(&coil3);

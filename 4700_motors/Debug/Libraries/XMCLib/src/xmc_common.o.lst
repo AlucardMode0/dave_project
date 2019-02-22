@@ -22,267 +22,267 @@
   22              	 .thumb_func
   24              	XMC_PRIOARRAY_GetHead:
   25              	.LFB130:
-  26              	 .file 1 "D:/ghc/4700_motors/Libraries/XMCLib/inc/xmc_common.h"
-   1:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /**
-   2:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * @file xmc_common.h
-   3:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * @date 2017-08-03
-   4:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
-   5:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * @cond
-   6:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   *************************************************************************************************
-   7:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * XMClib v2.1.20 - XMC Peripheral Driver Library 
-   8:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
-   9:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * Copyright (c) 2015-2018, Infineon Technologies AG
-  10:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * All rights reserved.                        
-  11:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *                                             
-  12:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * Redistribution and use in source and binary forms, with or without modification,are permitted pr
-  13:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * following conditions are met:   
-  14:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *                                                                              
-  15:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * Redistributions of source code must retain the above copyright notice, this list of conditions a
-  16:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * disclaimer.                        
-  17:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * 
-  18:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * Redistributions in binary form must reproduce the above copyright notice, this list of condition
-  19:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * disclaimer in the documentation and/or other materials provided with the distribution.          
-  20:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * 
-  21:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * Neither the name of the copyright holders nor the names of its contributors may be used to endor
-  22:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * products derived from this software without specific prior written permission.                  
-  23:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *                                                                              
-  24:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR I
-  25:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTI
-  26:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, IN
-  27:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBS
-  28:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THE
-  29:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
-  30:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                            
-  31:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *                                                                              
-  32:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * To improve the quality of the software, users are encouraged to share modifications, enhancement
-  33:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * Infineon Technologies AG dave@infineon.com).                                                    
-  34:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
-  35:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
-  36:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * Change History
-  37:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * --------------
-  38:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
-  39:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * 2015-06-20:
-  40:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Initial
-  41:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Brief section updated
-  42:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Added XMC_LIB_VERSION macro
-  43:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
-  44:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * 2016-02-26:
-  45:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.6
-  46:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *      
-  47:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * 2016-05-30:
-  48:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.8
-  49:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
-  50:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * 2016-11-18:
-  51:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.10
-  52:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Changed type of size in XMC_PRIOARRAY_t to fix compilation warnings
-  53:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
-  54:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * 2017-04-04:
-  55:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.12
-  56:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
-  57:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * 2017-06-24:
-  58:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.14
-  59:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
-  60:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * 2017-08-03:
-  61:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.16
-  62:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Added __RAM_FUNC macro
-  63:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
-  64:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * 2018-06-29:
-  65:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.20
-  66:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
-  67:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * @endcond 
-  68:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
-  69:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
-  70:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
-  71:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #ifndef XMC_COMMON_H
-  72:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_COMMON_H
-  73:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
-  74:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #include <stddef.h>
-  75:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #include <stdint.h>
-  76:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #include <stdbool.h>
-  77:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #include <string.h>
-  78:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
-  79:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #include "xmc_device.h"
-  80:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
-  81:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /**
-  82:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * @addtogroup XMClib XMC Peripheral Library
-  83:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * @{
-  84:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
-  85:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
-  86:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /**
-  87:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * @addtogroup COMMON
-  88:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * @brief Common APIs to all peripherals for XMC microcontroller family 
-  89:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * @{
-  90:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
-  91:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
-  92:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /**************************************************************************************************
-  93:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * MACROS
-  94:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
-  95:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_MAJOR_VERSION	(2U)
-  96:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_MINOR_VERSION	(1U)
-  97:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_PATCH_VERSION	(20U)
-  98:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  
-  99:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_VERSION         ((XMC_LIB_MAJOR_VERSION << 16U) + (XMC_LIB_MINOR_VERSION << 8U) + X
- 100:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 101:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /* Define WEAK attribute */
- 102:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #if !defined(__WEAK)
- 103:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #if defined ( __CC_ARM )
- 104:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __attribute__ ((weak))
- 105:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #elif defined (__ARMCC_VERSION) && (__ARMCC_VERSION >= 6010050)
- 106:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __attribute__ ((weak))
- 107:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __ICCARM__ )
- 108:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __weak
- 109:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __GNUC__ )
- 110:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __attribute__ ((weak))
- 111:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __TASKING__ )
- 112:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __attribute__ ((weak))
- 113:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #endif
- 114:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #endif
- 115:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 116:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #if !defined(__RAM_FUNC)
- 117:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #if defined ( __CC_ARM )
- 118:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** // http://www.keil.com/support/docs/3723.htm
- 119:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define __RAM_FUNC __attribute__((section("RAMCODESECTION")))
- 120:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #elif defined (__ARMCC_VERSION) && (__ARMCC_VERSION >= 6010050)
- 121:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define __RAM_FUNC __attribute__((section("RAMCODESECTION")))
- 122:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __ICCARM__ )
- 123:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** // https://www.iar.com/support/tech-notes/linker/controlling-placement-of-the-section-where-__ramfu
- 124:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define __RAM_FUNC __ramfunc
- 125:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __GNUC__ )
- 126:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define __RAM_FUNC __attribute__((section(".ram_code"), long_call))
- 127:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __TASKING__ )
- 128:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define __RAM_FUNC __attribute__((section(".ram_code")))
- 129:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #endif
- 130:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #endif
- 131:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 132:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #ifdef XMC_ASSERT_ENABLE
- 133:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_ASSERT(msg, exp) { if(!(exp)) {XMC_AssertHandler(msg, __FILE__, __LINE__);} }
- 134:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #else
- 135:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_ASSERT(msg, exp) { ; }
- 136:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #endif
- 137:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 138:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #ifdef XMC_DEBUG_ENABLE
- 139:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  #include <stdio.h>
- 140:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_DEBUG(...) { printf(__VA_ARGS__); }
- 141:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #else
- 142:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_DEBUG(...) { ; }
- 143:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #endif
- 144:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 145:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_UNUSED_ARG(x) (void)x
- 146:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 147:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_STRUCT_INIT(m) memset(&m, 0, sizeof(m))
- 148:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 149:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_PRIOARRAY_DEF(name, size) \
- 150:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** XMC_PRIOARRAY_ITEM_t prioarray_m_##name[size + 2]; \
- 151:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** XMC_PRIOARRAY_t prioarray_def_##name = {(size), (prioarray_m_##name)};
- 152:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 153:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_PRIOARRAY(name) \
- 154:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** &prioarray_def_##name
- 155:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 156:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /**************************************************************************************************
- 157:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * DATA STRUCTURES
- 158:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
- 159:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
- 160:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
- 161:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
- 162:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** typedef struct XMC_DRIVER_VERSION 
- 163:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** {
- 164:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   uint8_t major;
- 165:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   uint8_t minor;
- 166:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   uint8_t patch;
- 167:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** } XMC_DRIVER_VERSION_t;
- 168:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 169:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
- 170:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
- 171:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
- 172:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** typedef void *XMC_LIST_t;
- 173:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 174:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
- 175:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
- 176:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
- 177:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** typedef struct XMC_PRIOARRAY_ITEM
- 178:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** {
- 179:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   int32_t priority;
- 180:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   int32_t previous;
- 181:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   int32_t next;
- 182:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** } XMC_PRIOARRAY_ITEM_t;
- 183:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 184:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
- 185:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
- 186:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
- 187:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** typedef struct XMC_PRIOARRAY
- 188:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** {
- 189:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   int32_t size;
- 190:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   XMC_PRIOARRAY_ITEM_t *items;
- 191:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** } XMC_PRIOARRAY_t;
- 192:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 193:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /**************************************************************************************************
- 194:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * API PROTOTYPES
- 195:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
- 196:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 197:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #ifdef __cplusplus
- 198:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** extern "C" {
- 199:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #endif
- 200:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 201:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
- 202:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
- 203:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
- 204:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** void XMC_AssertHandler(const char *const msg, const char *const file, uint32_t line);
- 205:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 206:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
- 207:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
- 208:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
- 209:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Init(XMC_LIST_t *list);
- 210:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 211:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
- 212:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
- 213:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
- 214:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Add(XMC_LIST_t *list, void *const item);
- 215:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 216:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
- 217:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
- 218:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
- 219:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Remove(XMC_LIST_t *list, void *const item);
- 220:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 221:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
- 222:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
- 223:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
- 224:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** uint32_t XMC_LIST_GetLength(XMC_LIST_t *list);
- 225:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 226:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
- 227:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
- 228:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
- 229:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** void *XMC_LIST_GetHead(XMC_LIST_t *list);
- 230:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 231:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
- 232:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
- 233:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
- 234:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** void *XMC_LIST_GetTail(XMC_LIST_t *list);
- 235:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 236:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
- 237:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
- 238:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
- 239:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Insert(XMC_LIST_t *list, void *prev_item, void *new_item);
- 240:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 241:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
- 242:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
- 243:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
- 244:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** void XMC_PRIOARRAY_Init(XMC_PRIOARRAY_t *prioarray);
- 245:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 246:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
- 247:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
- 248:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
- 249:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** void XMC_PRIOARRAY_Add(XMC_PRIOARRAY_t *prioarray, int32_t item, int32_t priority);
- 250:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 251:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
- 252:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
- 253:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
- 254:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** void XMC_PRIOARRAY_Remove(XMC_PRIOARRAY_t *prioarray, int32_t item);
- 255:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 256:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
- 257:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
- 258:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
- 259:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetHead(XMC_PRIOARRAY_t *prioarray)
- 260:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** {
+  26              	 .file 1 "D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc/xmc_common.h"
+   1:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /**
+   2:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * @file xmc_common.h
+   3:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * @date 2017-08-03
+   4:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+   5:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * @cond
+   6:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   *************************************************************************************************
+   7:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * XMClib v2.1.20 - XMC Peripheral Driver Library 
+   8:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+   9:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * Copyright (c) 2015-2018, Infineon Technologies AG
+  10:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * All rights reserved.                        
+  11:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *                                             
+  12:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * Redistribution and use in source and binary forms, with or without modification,are permitted pr
+  13:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * following conditions are met:   
+  14:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *                                                                              
+  15:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * Redistributions of source code must retain the above copyright notice, this list of conditions a
+  16:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * disclaimer.                        
+  17:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * 
+  18:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * Redistributions in binary form must reproduce the above copyright notice, this list of condition
+  19:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * disclaimer in the documentation and/or other materials provided with the distribution.          
+  20:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * 
+  21:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * Neither the name of the copyright holders nor the names of its contributors may be used to endor
+  22:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * products derived from this software without specific prior written permission.                  
+  23:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *                                                                              
+  24:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR I
+  25:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTI
+  26:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, IN
+  27:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBS
+  28:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THE
+  29:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
+  30:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                            
+  31:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *                                                                              
+  32:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * To improve the quality of the software, users are encouraged to share modifications, enhancement
+  33:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * Infineon Technologies AG dave@infineon.com).                                                    
+  34:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
+  35:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+  36:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * Change History
+  37:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * --------------
+  38:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+  39:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * 2015-06-20:
+  40:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Initial
+  41:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Brief section updated
+  42:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Added XMC_LIB_VERSION macro
+  43:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+  44:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * 2016-02-26:
+  45:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.6
+  46:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *      
+  47:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * 2016-05-30:
+  48:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.8
+  49:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+  50:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * 2016-11-18:
+  51:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.10
+  52:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Changed type of size in XMC_PRIOARRAY_t to fix compilation warnings
+  53:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+  54:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * 2017-04-04:
+  55:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.12
+  56:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+  57:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * 2017-06-24:
+  58:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.14
+  59:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+  60:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * 2017-08-03:
+  61:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.16
+  62:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Added __RAM_FUNC macro
+  63:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+  64:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * 2018-06-29:
+  65:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.20
+  66:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+  67:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * @endcond 
+  68:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+  69:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
+  70:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+  71:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #ifndef XMC_COMMON_H
+  72:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_COMMON_H
+  73:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+  74:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #include <stddef.h>
+  75:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #include <stdint.h>
+  76:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #include <stdbool.h>
+  77:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #include <string.h>
+  78:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+  79:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #include "xmc_device.h"
+  80:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+  81:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /**
+  82:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * @addtogroup XMClib XMC Peripheral Library
+  83:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * @{
+  84:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
+  85:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+  86:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /**
+  87:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * @addtogroup COMMON
+  88:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * @brief Common APIs to all peripherals for XMC microcontroller family 
+  89:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * @{
+  90:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
+  91:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+  92:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /**************************************************************************************************
+  93:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * MACROS
+  94:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
+  95:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_MAJOR_VERSION	(2U)
+  96:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_MINOR_VERSION	(1U)
+  97:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_PATCH_VERSION	(20U)
+  98:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  
+  99:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_VERSION         ((XMC_LIB_MAJOR_VERSION << 16U) + (XMC_LIB_MINOR_VERSION << 8U) + X
+ 100:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 101:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /* Define WEAK attribute */
+ 102:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #if !defined(__WEAK)
+ 103:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #if defined ( __CC_ARM )
+ 104:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __attribute__ ((weak))
+ 105:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #elif defined (__ARMCC_VERSION) && (__ARMCC_VERSION >= 6010050)
+ 106:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __attribute__ ((weak))
+ 107:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __ICCARM__ )
+ 108:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __weak
+ 109:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __GNUC__ )
+ 110:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __attribute__ ((weak))
+ 111:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __TASKING__ )
+ 112:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __attribute__ ((weak))
+ 113:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #endif
+ 114:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #endif
+ 115:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 116:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #if !defined(__RAM_FUNC)
+ 117:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #if defined ( __CC_ARM )
+ 118:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** // http://www.keil.com/support/docs/3723.htm
+ 119:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define __RAM_FUNC __attribute__((section("RAMCODESECTION")))
+ 120:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #elif defined (__ARMCC_VERSION) && (__ARMCC_VERSION >= 6010050)
+ 121:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define __RAM_FUNC __attribute__((section("RAMCODESECTION")))
+ 122:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __ICCARM__ )
+ 123:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** // https://www.iar.com/support/tech-notes/linker/controlling-placement-of-the-section-where-__ramfu
+ 124:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define __RAM_FUNC __ramfunc
+ 125:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __GNUC__ )
+ 126:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define __RAM_FUNC __attribute__((section(".ram_code"), long_call))
+ 127:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __TASKING__ )
+ 128:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define __RAM_FUNC __attribute__((section(".ram_code")))
+ 129:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #endif
+ 130:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #endif
+ 131:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 132:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #ifdef XMC_ASSERT_ENABLE
+ 133:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_ASSERT(msg, exp) { if(!(exp)) {XMC_AssertHandler(msg, __FILE__, __LINE__);} }
+ 134:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #else
+ 135:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_ASSERT(msg, exp) { ; }
+ 136:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #endif
+ 137:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 138:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #ifdef XMC_DEBUG_ENABLE
+ 139:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  #include <stdio.h>
+ 140:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_DEBUG(...) { printf(__VA_ARGS__); }
+ 141:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #else
+ 142:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_DEBUG(...) { ; }
+ 143:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #endif
+ 144:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 145:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_UNUSED_ARG(x) (void)x
+ 146:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 147:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_STRUCT_INIT(m) memset(&m, 0, sizeof(m))
+ 148:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 149:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_PRIOARRAY_DEF(name, size) \
+ 150:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** XMC_PRIOARRAY_ITEM_t prioarray_m_##name[size + 2]; \
+ 151:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** XMC_PRIOARRAY_t prioarray_def_##name = {(size), (prioarray_m_##name)};
+ 152:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 153:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_PRIOARRAY(name) \
+ 154:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** &prioarray_def_##name
+ 155:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 156:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /**************************************************************************************************
+ 157:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * DATA STRUCTURES
+ 158:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
+ 159:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 160:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 161:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 162:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** typedef struct XMC_DRIVER_VERSION 
+ 163:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** {
+ 164:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   uint8_t major;
+ 165:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   uint8_t minor;
+ 166:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   uint8_t patch;
+ 167:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** } XMC_DRIVER_VERSION_t;
+ 168:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 169:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 170:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 171:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 172:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** typedef void *XMC_LIST_t;
+ 173:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 174:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 175:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 176:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 177:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** typedef struct XMC_PRIOARRAY_ITEM
+ 178:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** {
+ 179:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   int32_t priority;
+ 180:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   int32_t previous;
+ 181:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   int32_t next;
+ 182:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** } XMC_PRIOARRAY_ITEM_t;
+ 183:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 184:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 185:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 186:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 187:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** typedef struct XMC_PRIOARRAY
+ 188:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** {
+ 189:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   int32_t size;
+ 190:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   XMC_PRIOARRAY_ITEM_t *items;
+ 191:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** } XMC_PRIOARRAY_t;
+ 192:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 193:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /**************************************************************************************************
+ 194:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  * API PROTOTYPES
+ 195:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
+ 196:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 197:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #ifdef __cplusplus
+ 198:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** extern "C" {
+ 199:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** #endif
+ 200:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 201:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 202:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 203:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 204:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** void XMC_AssertHandler(const char *const msg, const char *const file, uint32_t line);
+ 205:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 206:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 207:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 208:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 209:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Init(XMC_LIST_t *list);
+ 210:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 211:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 212:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 213:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 214:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Add(XMC_LIST_t *list, void *const item);
+ 215:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 216:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 217:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 218:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 219:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Remove(XMC_LIST_t *list, void *const item);
+ 220:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 221:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 222:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 223:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 224:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** uint32_t XMC_LIST_GetLength(XMC_LIST_t *list);
+ 225:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 226:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 227:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 228:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 229:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** void *XMC_LIST_GetHead(XMC_LIST_t *list);
+ 230:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 231:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 232:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 233:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 234:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** void *XMC_LIST_GetTail(XMC_LIST_t *list);
+ 235:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 236:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 237:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 238:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 239:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Insert(XMC_LIST_t *list, void *prev_item, void *new_item);
+ 240:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 241:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 242:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 243:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 244:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** void XMC_PRIOARRAY_Init(XMC_PRIOARRAY_t *prioarray);
+ 245:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 246:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 247:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 248:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 249:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** void XMC_PRIOARRAY_Add(XMC_PRIOARRAY_t *prioarray, int32_t item, int32_t priority);
+ 250:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 251:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 252:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 253:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 254:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** void XMC_PRIOARRAY_Remove(XMC_PRIOARRAY_t *prioarray, int32_t item);
+ 255:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 256:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 257:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 258:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 259:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetHead(XMC_PRIOARRAY_t *prioarray)
+ 260:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** {
   27              	 .loc 1 260 0
   28              	 .cfi_startproc
   29              	 
@@ -299,8 +299,8 @@
   40              	.LCFI2:
   41              	 .cfi_def_cfa_register 7
   42 0006 7860     	 str r0,[r7,#4]
- 261:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_Init: NULL pointer", prioarray != NULL);
- 262:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[prioarray->size].next;
+ 261:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_Init: NULL pointer", prioarray != NULL);
+ 262:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[prioarray->size].next;
   43              	 .loc 1 262 0
   44 0008 7B68     	 ldr r3,[r7,#4]
   45 000a 5A68     	 ldr r2,[r3,#4]
@@ -313,7 +313,7 @@
   52 0018 9B00     	 lsls r3,r3,#2
   53 001a 1344     	 add r3,r3,r2
   54 001c 9B68     	 ldr r3,[r3,#8]
- 263:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** }
+ 263:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** }
   55              	 .loc 1 263 0
   56 001e 1846     	 mov r0,r3
   57 0020 0C37     	 adds r7,r7,#12
@@ -336,21 +336,21 @@
   75              	 .thumb_func
   77              	XMC_PRIOARRAY_GetItemPriority:
   78              	.LFB132:
- 264:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 265:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
- 266:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
- 267:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
- 268:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetTail(XMC_PRIOARRAY_t *prioarray)
- 269:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** {
- 270:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_Init: NULL pointer", prioarray != NULL);
- 271:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[prioarray->size + 1].previous;
- 272:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** }
- 273:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 274:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
- 275:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
- 276:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
- 277:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetItemPriority(XMC_PRIOARRAY_t *prioarray, int32_t item)
- 278:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** {
+ 264:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 265:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 266:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 267:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 268:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetTail(XMC_PRIOARRAY_t *prioarray)
+ 269:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** {
+ 270:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_Init: NULL pointer", prioarray != NULL);
+ 271:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[prioarray->size + 1].previous;
+ 272:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** }
+ 273:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 274:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 275:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 276:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 277:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetItemPriority(XMC_PRIOARRAY_t *prioarray, int32_t item)
+ 278:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** {
   79              	 .loc 1 278 0
   80              	 .cfi_startproc
   81              	 
@@ -368,8 +368,8 @@
   93              	 .cfi_def_cfa_register 7
   94 0006 7860     	 str r0,[r7,#4]
   95 0008 3960     	 str r1,[r7]
- 279:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_GetItemPriority: item out of range", (item >= 0) && (item < prioarray->
- 280:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[item].priority;
+ 279:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_GetItemPriority: item out of range", (item >= 0) && (item < prioarray->
+ 280:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[item].priority;
   96              	 .loc 1 280 0
   97 000a 7B68     	 ldr r3,[r7,#4]
   98 000c 5968     	 ldr r1,[r3,#4]
@@ -380,7 +380,7 @@
  103 0016 9B00     	 lsls r3,r3,#2
  104 0018 0B44     	 add r3,r3,r1
  105 001a 1B68     	 ldr r3,[r3]
- 281:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** }
+ 281:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** }
  106              	 .loc 1 281 0
  107 001c 1846     	 mov r0,r3
  108 001e 0C37     	 adds r7,r7,#12
@@ -403,12 +403,12 @@
  126              	 .thumb_func
  128              	XMC_PRIOARRAY_GetItemNext:
  129              	.LFB133:
- 282:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
- 283:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
- 284:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
- 285:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
- 286:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetItemNext(XMC_PRIOARRAY_t *prioarray, int32_t item)
- 287:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** {
+ 282:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** 
+ 283:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 284:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 285:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 286:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetItemNext(XMC_PRIOARRAY_t *prioarray, int32_t item)
+ 287:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** {
  130              	 .loc 1 287 0
  131              	 .cfi_startproc
  132              	 
@@ -426,8 +426,8 @@
  144              	 .cfi_def_cfa_register 7
  145 0006 7860     	 str r0,[r7,#4]
  146 0008 3960     	 str r1,[r7]
- 288:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_GetItemNext: item out of range", (item >= 0) && (item < prioarray->size
- 289:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[item].next;
+ 288:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_GetItemNext: item out of range", (item >= 0) && (item < prioarray->size
+ 289:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[item].next;
  147              	 .loc 1 289 0
  148 000a 7B68     	 ldr r3,[r7,#4]
  149 000c 5968     	 ldr r1,[r3,#4]
@@ -438,7 +438,7 @@
  154 0016 9B00     	 lsls r3,r3,#2
  155 0018 0B44     	 add r3,r3,r1
  156 001a 9B68     	 ldr r3,[r3,#8]
- 290:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** }
+ 290:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_common.h **** }
  157              	 .loc 1 290 0
  158 001c 1846     	 mov r0,r3
  159 001e 0C37     	 adds r7,r7,#12
@@ -1373,9 +1373,9 @@
  886              	.LFE143:
  888              	 .text
  889              	.Letext0:
- 890              	 .file 3 "d:\\dave4\\dave_4-4-2_32bit_2018-02-23\\dave-ide-4.4.2-32bit\\dave-ide-4.4.2-32bit\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
- 891              	 .file 4 "d:\\dave4\\dave_4-4-2_32bit_2018-02-23\\dave-ide-4.4.2-32bit\\dave-ide-4.4.2-32bit\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
- 892              	 .file 5 "D:/ghc/4700_motors/Libraries/CMSIS/Include/core_cm4.h"
+ 890              	 .file 3 "c:\\users\\vere\\downloads\\dave_4-4-2_32bit_2018-02-23\\dave-ide-4.4.2-32bit\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 891              	 .file 4 "c:\\users\\vere\\downloads\\dave_4-4-2_32bit_2018-02-23\\dave-ide-4.4.2-32bit\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+ 892              	 .file 5 "D:/ghc/dave_project/4700_motors/Libraries/CMSIS/Include/core_cm4.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 xmc_common.c
     {standard input}:20     .text.XMC_PRIOARRAY_GetHead:00000000 $t

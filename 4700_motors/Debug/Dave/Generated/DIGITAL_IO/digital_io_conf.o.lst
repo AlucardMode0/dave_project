@@ -66,12 +66,12 @@
   74 0012 0000     	 .space 2
   75              	 .text
   76              	.Letext0:
-  77              	 .file 1 "d:\\dave4\\dave_4-4-2_32bit_2018-02-23\\dave-ide-4.4.2-32bit\\dave-ide-4.4.2-32bit\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
-  78              	 .file 2 "d:\\dave4\\dave_4-4-2_32bit_2018-02-23\\dave-ide-4.4.2-32bit\\dave-ide-4.4.2-32bit\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
-  79              	 .file 3 "D:/ghc/4700_motors/Libraries/XMCLib/inc/xmc_gpio.h"
-  80              	 .file 4 "D:/ghc/4700_motors/Libraries/XMCLib/inc/xmc4_gpio.h"
+  77              	 .file 1 "c:\\users\\vere\\downloads\\dave_4-4-2_32bit_2018-02-23\\dave-ide-4.4.2-32bit\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+  78              	 .file 2 "c:\\users\\vere\\downloads\\dave_4-4-2_32bit_2018-02-23\\dave-ide-4.4.2-32bit\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+  79              	 .file 3 "D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc/xmc_gpio.h"
+  80              	 .file 4 "D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc/xmc4_gpio.h"
   81              	 .file 5 "../Dave/Generated/DIGITAL_IO/digital_io.h"
-  82              	 .file 6 "D:/ghc/4700_motors/Libraries/CMSIS/Include/core_cm4.h"
+  82              	 .file 6 "D:/ghc/dave_project/4700_motors/Libraries/CMSIS/Include/core_cm4.h"
   83              	 .file 7 "../Dave/Generated/DIGITAL_IO/digital_io_conf.c"
 DEFINED SYMBOLS
                             *ABS*:00000000 digital_io_conf.c

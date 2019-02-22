@@ -22,541 +22,541 @@
   22              	 .thumb_func
   24              	XMC_DMA_GetEventStatus:
   25              	.LFB135:
-  26              	 .file 1 "D:/ghc/4700_motors/Libraries/XMCLib/inc/xmc_dma.h"
-   1:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
-   2:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @file xmc_dma.h
-   3:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @date 2018-09-18
-   4:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
-   5:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @cond
-   6:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  **************************************************************************************************
-   7:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * XMClib v2.1.20 - XMC Peripheral Driver Library
-   8:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
-   9:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Copyright (c) 2015-2018, Infineon Technologies AG
-  10:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * All rights reserved.                        
-  11:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *                                             
-  12:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Redistribution and use in source and binary forms, with or without modification,are permitted pr
-  13:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * following conditions are met:   
-  14:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *                                                                              
-  15:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Redistributions of source code must retain the above copyright notice, this list of conditions a
-  16:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * disclaimer.                        
-  17:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * 
-  18:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Redistributions in binary form must reproduce the above copyright notice, this list of condition
-  19:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * disclaimer in the documentation and/or other materials provided with the distribution.          
-  20:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * 
-  21:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Neither the name of the copyright holders nor the names of its contributors may be used to endor
-  22:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * products derived from this software without specific prior written permission.                  
-  23:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *                                                                              
-  24:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR I
-  25:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTI
-  26:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, IN
-  27:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBS
-  28:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THE
-  29:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
-  30:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                            
-  31:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *                                                                              
-  32:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * To improve the quality of the software, users are encouraged to share modifications, enhancement
-  33:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Infineon Technologies AG dave@infineon.com).                                                    
-  34:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  **************************************************************************************************
-  35:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
-  36:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Change History
-  37:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * --------------
-  38:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
-  39:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * 2015-02-20:
-  40:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Initial <br>
-  41:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
-  42:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * 2015-06-20:
-  43:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Add the declarations for the following APIs: <br>
-  44:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *       XMC_DMA_DisableRequestLine, XMC_DMA_ClearRequestLine, <br>
-  45:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *       XMC_DMA_CH_ClearSourcePeripheralRequest, <br>
-  46:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *       XMC_DMA_CH_ClearDestinationPeripheralRequest <br>
-  47:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Documentation updates <br>
-  48:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Removed version macros and declaration of GetDriverVersion API <br>
-  49:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
-  50:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * 2016-10-28:
-  51:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Fix documentation on maximum block size
-  52:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
-  53:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * 2017-09-28:
-  54:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Improved documentation and added XMC_DMA_CH_EnableFifo() and XMC_DMA_CH_DisableFifo()
-  55:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
-  56:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * 2018-09-18:
-  57:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Added XMC_DMA_CH_GetTransferredData()
-  58:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
-  59:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @endcond
-  60:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
-  61:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
-  62:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #ifndef XMC_DMA_H
-  63:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #define XMC_DMA_H
-  64:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
-  65:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /*******************************************************************************
-  66:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * HEADER FILES
-  67:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *******************************************************************************/
-  68:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
-  69:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #include "xmc_common.h"
-  70:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
-  71:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #if defined (GPDMA0)
-  72:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
-  73:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #include "xmc_dma_map.h"
-  74:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
-  75:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
-  76:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @addtogroup XMClib XMC Peripheral Library
-  77:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @{
-  78:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
-  79:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
-  80:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
-  81:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @addtogroup DMA
-  82:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @brief General purpose DMA (GPDMA) driver for the XMC4000 microcontroller family
-  83:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
-  84:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The GPDMA is a highly configurable DMA controller that allows high-speed data transfers
-  85:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * between peripherals and memories. Complex data transfers can be done with minimal
-  86:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * intervention of the processor, making CPU available for other operations.
-  87:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
-  88:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * GPDMA provides extensive support for XMC microcontroller peripherals like A/D, D/A
-  89:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * converters and timers. Data transfers through communication interfaces (USIC) using the
-  90:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * GPDMA increase efficiency and parallelism for real-time applications.
-  91:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
-  92:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The DMA low level driver provides functions to configure and initialize the GPDMA
-  93:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * hardware peripheral.
-  94:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @{
-  95:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
-  96:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
-  97:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /*******************************************************************************
-  98:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * MACROS
-  99:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *******************************************************************************/
- 100:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 101:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #if defined (GPDMA0)
- 102:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #define XMC_DMA0 ((XMC_DMA_t *)GPDMA0_CH0_BASE) /**< DMA module 0 */
- 103:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #define XMC_DMA0_NUM_CHANNELS 8
- 104:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #endif
- 105:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 106:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #if defined (GPDMA1)
- 107:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #define XMC_DMA1 ((XMC_DMA_t *)GPDMA1_CH0_BASE) /**< DMA module 1, only available in XMC45xx series
- 108:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #define XMC_DMA1_NUM_CHANNELS 4
- 109:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #endif
- 110:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 111:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /*******************************************************************************
- 112:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * ENUMS
- 113:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *******************************************************************************/
- 114:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 115:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 116:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA transfer types
- 117:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 118:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_TRANSFER_TYPE
- 119:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
- 120:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_SINGLE_BLOCK,                                /**< Single block */
- 121:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_CONTIGUOUS_DSTADR_RELOAD, /**< Multi-block: src addre
- 122:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_RELOAD_DSTADR_CONTIGUOUS, /**< Multi-block: src addre
- 123:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_RELOAD_DSTADR_RELOAD,     /**< Multi-block: src addre
- 124:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_CONTIGUOUS_DSTADR_LINKED, /**< Multi-block: src addre
- 125:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_RELOAD_DSTADR_LINKED,     /**< Multi-block: src addre
- 126:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_LINKED_DSTADR_CONTIGUOUS, /**< Multi-block: src addre
- 127:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_LINKED_DSTADR_RELOAD,     /**< Multi-block: src addre
- 128:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_LINKED_DSTADR_LINKED      /**< Multi-block: src addre
- 129:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_TRANSFER_TYPE_t;
- 130:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 131:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 132:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA transfer flow modes
- 133:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 134:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_TRANSFER_FLOW
- 135:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
- 136:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_M2M_DMA    = 0x0UL, /**< Memory to memory (DMA flow controller) */
- 137:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_M2P_DMA    = 0x1UL, /**< Memory to peripheral (DMA flow controller) */
- 138:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_P2M_DMA    = 0x2UL, /**< Peripheral to memory (DMA flow controller) */
- 139:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_P2P_DMA    = 0x3UL, /**< Peripheral to peripheral (DMA flow controller) 
- 140:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_P2M_PER    = 0x4UL, /**< Peripheral to memory (Peripheral flow controlle
- 141:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_P2P_SRCPER = 0x5UL, /**< Peripheral to peripheral (Source peripheral flo
- 142:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_M2P_PER    = 0x6UL, /**< Memory to peripheral (Peripheral flow controlle
- 143:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_P2P_DSTPER = 0x7UL  /**< Peripheral to peripheral (Destination periphera
- 144:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_TRANSFER_FLOW_t;
- 145:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 146:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 147:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Valid burst length values
- 148:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 149:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_BURST_LENGTH
- 150:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
- 151:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_BURST_LENGTH_1 = 0x0UL, /**< Burst length: 1 word */
- 152:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_BURST_LENGTH_4 = 0x1UL, /**< Burst length: 4 words */
- 153:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_BURST_LENGTH_8 = 0x2UL  /**< Burst length: 8 words */
- 154:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_BURST_LENGTH_t;
- 155:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 156:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 157:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Valid transfer width values
- 158:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 159:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_TRANSFER_WIDTH
- 160:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
- 161:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_WIDTH_8  = 0x0UL, /**< 8-bit transfer width */
- 162:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_WIDTH_16 = 0x1UL, /**< 16-bit transfer width */
- 163:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_WIDTH_32 = 0x2UL  /**< 32-bit transfer width */
- 164:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_TRANSFER_WIDTH_t;
- 165:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 166:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 167:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA address count mode
- 168:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 169:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_ADDRESS_COUNT_MODE
- 170:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
- 171:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_ADDRESS_COUNT_MODE_INCREMENT = 0x0UL, /**< Address count mode: increment */
- 172:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_ADDRESS_COUNT_MODE_DECREMENT = 0x1UL, /**< Address count mode: decrement */
- 173:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_ADDRESS_COUNT_MODE_NO_CHANGE = 0x2UL  /**< Address count mode: no change */
- 174:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_ADDRESS_COUNT_MODE_t;
- 175:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 176:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 177:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel priorities
- 178:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 179:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_PRIORITY
- 180:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
- 181:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_0 = 0x0UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 0 (low) *
- 182:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_1 = 0x1UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 1 */
- 183:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_2 = 0x2UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 2 */
- 184:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_3 = 0x3UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 3 */
- 185:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_4 = 0x4UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 4 */
- 186:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_5 = 0x5UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 5 */
- 187:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_6 = 0x6UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 6 */
- 188:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_7 = 0x7UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos  /**< DMA channel priority 7 (high) 
- 189:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_PRIORITY_t;
- 190:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 191:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 192:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Source handshake interface
- 193:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 194:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_SRC_HANDSHAKING
- 195:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
- 196:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_SRC_HANDSHAKING_HARDWARE = 0x0UL << GPDMA0_CH_CFGL_HS_SEL_SRC_Pos, /**< Source: hardwa
- 197:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_SRC_HANDSHAKING_SOFTWARE = 0x1UL << GPDMA0_CH_CFGL_HS_SEL_SRC_Pos  /**< Source: softwa
- 198:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_SRC_HANDSHAKING_t;
- 199:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 200:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 201:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Destination handshake interface
- 202:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 203:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_DST_HANDSHAKING
- 204:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
- 205:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_DST_HANDSHAKING_HARDWARE = 0x0UL << GPDMA0_CH_CFGL_HS_SEL_DST_Pos, /**< Destination: h
- 206:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_DST_HANDSHAKING_SOFTWARE = 0x1UL << GPDMA0_CH_CFGL_HS_SEL_DST_Pos  /**< Destination: s
- 207:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_DST_HANDSHAKING_t;
- 208:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 209:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 210:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA hardware handshaking interface
- 211:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Hardware handshaking available only if DMA is flow controller
- 212:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 213:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_HARDWARE_HANDSHAKING_IF
- 214:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
- 215:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_0 = 0x0UL, /**< Hardware handshaking interface 0 */
- 216:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_1 = 0x1UL, /**< Hardware handshaking interface 1 */
- 217:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_2 = 0x2UL, /**< Hardware handshaking interface 2 */
- 218:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_3 = 0x3UL, /**< Hardware handshaking interface 3 */
- 219:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_4 = 0x4UL, /**< Hardware handshaking interface 4 */
- 220:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_5 = 0x5UL, /**< Hardware handshaking interface 5 */
- 221:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_6 = 0x6UL, /**< Hardware handshaking interface 6 */
- 222:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_7 = 0x7UL  /**< Hardware handshaking interface 7 */
- 223:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_t;
- 224:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 225:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 226:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA events
- 227:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 228:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_EVENT
- 229:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
- 230:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_EVENT_TRANSFER_COMPLETE        = 0x1UL, /**< Transfer complete event */
- 231:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_EVENT_BLOCK_TRANSFER_COMPLETE  = 0x2UL, /**< Block transfer complete event */
- 232:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_EVENT_SRC_TRANSACTION_COMPLETE = 0x4UL, /**< Source transaction complete event */
- 233:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_EVENT_DST_TRANSACTION_COMPLETE = 0x8UL, /**< Destination transaction complete event */
- 234:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_EVENT_ERROR                    = 0x10UL /**< DMA error event */
- 235:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_EVENT_t;
- 236:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 237:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 238:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Transaction types
- 239:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 240:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_TRANSACTION_TYPE
- 241:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
- 242:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSACTION_TYPE_SINGLE, /**< Single DMA transaction */
- 243:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSACTION_TYPE_BURST   /**< Burst transaction */
- 244:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_TRANSACTION_TYPE_t;
- 245:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 246:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 247:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel status values
- 248:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 249:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_STATUS
- 250:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
- 251:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_STATUS_OK,    /**< DMA status OK */
- 252:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_STATUS_ERROR, /**< DMA status error */
- 253:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_STATUS_BUSY   /**< DMA is busy */
- 254:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_STATUS_t;
- 255:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 256:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /*******************************************************************************
- 257:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DATA STRUCTURES
- 258:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *******************************************************************************/
- 259:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 260:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 261:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel configuration structure <br>
- 262:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 263:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The structure represents a collection of all hardware registers used
- 264:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * to configure the DMA channel. It is contained within the ::XMC_DMA_t
- 265:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * structure. It's registers can be used to configure DMA transfer details
- 266:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * like source address, destination address, block size, incrementation
- 267:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * modes and the like.
- 268:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 269:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  
- 270:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef struct {
- 271:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SAR;
- 272:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED0;
- 273:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  DAR;
- 274:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED1;
- 275:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  LLP;
- 276:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED2;
- 277:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  CTLL;
- 278:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  CTLH;
- 279:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SSTAT;
- 280:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED3;
- 281:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  DSTAT;
- 282:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED4;
- 283:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SSTATAR;
- 284:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED5;
- 285:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  DSTATAR;
- 286:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED6;
- 287:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  CFGL;
- 288:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  CFGH;
- 289:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SGR;
- 290:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED7;
- 291:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  DSR;
- 292:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED8;
- 293:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } GPDMA_CH_t;
- 294:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 295:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 296:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA device structure <br>
- 297:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 298:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The structure represents a collection of all hardware registers used
- 299:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * to configure the GPDMA peripheral on the XMC4000 series of microcontrollers.
- 300:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The registers can be accessed with ::XMC_DMA0 and ::XMC_DMA1.
- 301:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 302:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef struct {
- 303:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   GPDMA_CH_t CH[8];
- 304:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 305:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  RAWCHEV[10];
- 306:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  STATUSCHEV[10];
- 307:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  MASKCHEV[10];
- 308:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __O  uint32_t  CLEARCHEV[10];
- 309:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  STATUSGLEV;
- 310:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED20;
- 311:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  REQSRCREG;
- 312:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED21;
- 313:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  REQDSTREG;
- 314:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED22;
- 315:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SGLREQSRCREG;
- 316:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED23;
- 317:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SGLREQDSTREG;
- 318:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED24;
- 319:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  LSTSRCREG;
- 320:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED25;
- 321:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  LSTDSTREG;
- 322:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED26;
- 323:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  DMACFGREG;
- 324:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED27;
- 325:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  CHENREG;
- 326:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED28;
- 327:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  ID;
- 328:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED29[19];
- 329:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  TYPE;
- 330:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  VERSION;
- 331:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_t;
- 332:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 333:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /* Anonymous structure/union guard start */
- 334:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #if defined (__CC_ARM)
- 335:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   #pragma push
- 336:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   #pragma anon_unions
- 337:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #elif defined (__TASKING__)
- 338:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   #pragma warning 586
- 339:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #endif
- 340:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 341:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 342:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel linked list item.
- 343:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Note: Needs to be word aligned
- 344:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 345:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef struct XMC_DMA_LLI
- 346:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
- 347:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t src_addr;                            /**< Source address */
- 348:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t dst_addr;                            /**< Destination address */
- 349:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   struct XMC_DMA_LLI *llp;                      /**< Linked list pointer of type XMC_DMA_LLI_t */
- 350:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   union
- 351:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   {
- 352:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     struct
- 353:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     {
- 354:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_interrupt: 1;             /**< Enable interrupts? */
- 355:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_transfer_width: 3;           /**< Destination transfer width (:: XMC_DMA_CH_TRAN
- 356:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_transfer_width: 3;           /**< Source transfer width (:: XMC_DMA_CH_TRANSFER_
- 357:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_address_count_mode: 2;       /**< Destination address count mode (:: XMC_DMA_CH_
- 358:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_address_count_mode: 2;       /**< Source address count mode (:: XMC_DMA_CH_ADDRE
- 359:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_burst_length: 3;             /**< Destination burst length (:: XMC_DMA_CH_BURST_
- 360:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_burst_length: 3;             /**< Source burst length (:: XMC_DMA_CH_BURST_LENGT
- 361:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_src_gather: 1;            /**< Enable source gather? */
- 362:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_dst_scatter: 1;           /**< Enable destination scatter? */
- 363:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t : 1;                             /**< Reserved bits */
- 364:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t transfer_flow: 3;                /**< DMA transfer flow (:: XMC_DMA_CH_TRANSFER_FLOW
- 365:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t : 4;                             /**< Reserved bits */
- 366:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_dst_linked_list: 1;       /**< Enable destination linked list? */
- 367:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_src_linked_list: 1;       /**< Enable source linked list? */
- 368:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t : 3;                             /**< Reserved bits */
- 369:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     };
- 370:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     uint32_t control;
- 371:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   };
- 372:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t block_size;                          /**< Transfer block size */
- 373:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t src_status;                          /**< Source status */
- 374:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t dst_status;                          /**< Destination status */
- 375:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_LLI_t;
- 376:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 377:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef XMC_DMA_LLI_t **XMC_DMA_LIST_t;         /**< Type definition for a linked list pointer */
- 378:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 379:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 380:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel configuration structure
- 381:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 382:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef struct XMC_DMA_CH_CONFIG
- 383:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
- 384:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   union
- 385:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   {
- 386:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     uint32_t control;
- 387:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     struct
- 388:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     {
- 389:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_interrupt: 1;             /**< Enable interrupts? */
- 390:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_transfer_width: 3;           /**< Destination transfer width (:: XMC_DMA_CH_TRAN
- 391:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_transfer_width: 3;           /**< Source transfer width (:: XMC_DMA_CH_TRANSFER_
- 392:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_address_count_mode: 2;       /**< Destination address count mode (:: XMC_DMA_CH_
- 393:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_address_count_mode: 2;       /**< Source address count mode (:: XMC_DMA_CH_ADDRE
- 394:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_burst_length: 3;             /**< Destination burst length (:: XMC_DMA_CH_BURST_
- 395:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_burst_length: 3;             /**< Source burst length (:: XMC_DMA_CH_BURST_LENGT
- 396:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_src_gather: 1;            /**< Enable source gather? */
- 397:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_dst_scatter: 1;           /**< Enable destination scatter? */
- 398:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t : 1;                             
- 399:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t transfer_flow: 3;                /**< DMA transfer flow (:: XMC_DMA_CH_TRANSFER_FLOW
- 400:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t : 9;                             
- 401:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     };
- 402:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   };
- 403:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 404:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t src_addr;                            /**< Source address */
- 405:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t dst_addr;                            /**< Destination address */
- 406:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_LLI_t *linked_list_pointer;           /**< Linked list pointer */
- 407:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   
- 408:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   union
- 409:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   {
- 410:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     uint32_t src_gather_control;
- 411:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     struct
- 412:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     {
- 413:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_gather_interval: 20;         /**< Source gather interval */
- 414:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_gather_count: 12;            /**< Source gather count */
- 415:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     };
- 416:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   };
- 417:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 418:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   union
- 419:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   {
- 420:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     uint32_t dst_scatter_control;
- 421:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     struct
- 422:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     {
- 423:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_scatter_interval: 20;        /**< Destination scatter interval */
- 424:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_scatter_count: 12;           /**< Destination scatter count */
- 425:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     };
- 426:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   };
- 427:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   
- 428:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   uint16_t block_size;                          /**< Block size for DMA controlled transfers [max. 
- 429:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_t transfer_type;     /**< DMA transfer type (:: XMC_DMA_CH_TRANSFER_TYPE
- 430:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_t priority;               /**< DMA channel priority (::XMC_DMA_CH_PRIORITY_t)
- 431:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_SRC_HANDSHAKING_t src_handshaking; /**< DMA source handshaking interface (:: XMC_DMA_C
- 432:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   uint8_t src_peripheral_request;               /**< Source peripheral request. See xmc_dma_map.h *
- 433:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_DST_HANDSHAKING_t dst_handshaking; /**< DMA destination handshaking interface (:: XMC_
- 434:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   uint8_t dst_peripheral_request;               /**< Destination peripheral request. See xmc_dma_ma
- 435:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_CONFIG_t;
- 436:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 437:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /* Anonymous structure/union guard end */
- 438:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #if defined (__CC_ARM)
- 439:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   #pragma pop
- 440:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #elif defined (__TASKING__)
- 441:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   #pragma warning restore
- 442:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #endif
- 443:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 444:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 445:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel event handler
- 446:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 447:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef void (*XMC_DMA_CH_EVENT_HANDLER_t)(XMC_DMA_CH_EVENT_t event);
- 448:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 449:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /*******************************************************************************
- 450:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * API PROTOTYPES
- 451:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *******************************************************************************/
- 452:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 453:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #ifdef __cplusplus
- 454:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** extern "C" {
- 455:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #endif
- 456:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 457:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 458:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
- 459:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @return None
- 460:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 461:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
- 462:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Initialize the GPDMA peripheral <br>
- 463:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 464:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
- 465:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The function initializes a prioritized list of DMA channels and enables the GPDMA
- 466:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * peripheral.
- 467:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 468:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** void XMC_DMA_Init(XMC_DMA_t *const dma);
- 469:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 470:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 471:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
- 472:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @return None
- 473:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 474:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
- 475:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Enable the GPDMA peripheral <br>
- 476:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 477:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
- 478:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The function de-asserts the GPDMA peripheral reset. In addition, it un-gates the
- 479:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * GPDMA0 peripheral clock for all XMC4000 series of microcontrollers with an exception
- 480:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * of the XMC4500 microcontroller. The XMC4500 doesn't support gating.
- 481:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 482:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** void XMC_DMA_Enable(XMC_DMA_t *const dma);
- 483:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 484:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 485:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
- 486:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @return None
- 487:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 488:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
- 489:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Disable the GPDMA peripheral <br>
- 490:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 491:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
- 492:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The function asserts the GPDMA peripheral reset. In addition, it gates the GPDMA0
- 493:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * peripheral clock for all XMC4000 series of microcontrollers with an exception of
- 494:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * the XMC4500 microcontroller. The XMC4500 doesn't support gating.
- 495:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 496:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** void XMC_DMA_Disable(XMC_DMA_t *const dma);
- 497:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 498:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 499:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
- 500:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @return bool
- 501:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 502:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
- 503:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Check if the GPDMA peripheral is enabled <br>
- 504:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 505:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
- 506:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * For the XMC4500 microcontroller, the function checks if the GPDMA module is asserted
- 507:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * and returns "false" if it is. In addition, it also checks if the clock is gated
- 508:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * for the other XMC4000 series of microcontrollers. It returns "true" if the peripheral
- 509:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * is enabled.
- 510:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 511:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** bool XMC_DMA_IsEnabled(const XMC_DMA_t *const dma);
- 512:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 513:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 514:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
- 515:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA event status
- 516:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 517:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
- 518:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Get DMA event status <br>
- 519:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 520:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
- 521:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns the collective (global) status of GPDMA events. The following
- 522:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * lists the various DMA events and their corresponding enumeration. The return value
- 523:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * of this function may then be masked with any one of the following enumerations to
- 524:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * obtain the status of individual DMA events. <br>
- 525:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 526:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
- 527:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Transfer complete -> ::XMC_DMA_CH_EVENT_TRANSFER_COMPLETE                       <br>
- 528:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Block transfer complete -> ::XMC_DMA_CH_EVENT_BLOCK_TRANSFER_COMPLETE           <br>
- 529:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Source transaction complete -> ::XMC_DMA_CH_EVENT_SRC_TRANSACTION_COMPLETE      <br>
- 530:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Destination transaction complete -> ::XMC_DMA_CH_EVENT_DST_TRANSACTION_COMPLETE <br>
- 531:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA error event -> ::XMC_DMA_CH_EVENT_ERROR                                     <br>
- 532:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 533:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetEventStatus(XMC_DMA_t *const dma)
- 534:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
+  26              	 .file 1 "D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc/xmc_dma.h"
+   1:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+   2:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @file xmc_dma.h
+   3:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @date 2018-09-18
+   4:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+   5:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @cond
+   6:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  **************************************************************************************************
+   7:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * XMClib v2.1.20 - XMC Peripheral Driver Library
+   8:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+   9:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Copyright (c) 2015-2018, Infineon Technologies AG
+  10:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * All rights reserved.                        
+  11:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *                                             
+  12:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Redistribution and use in source and binary forms, with or without modification,are permitted pr
+  13:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * following conditions are met:   
+  14:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *                                                                              
+  15:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Redistributions of source code must retain the above copyright notice, this list of conditions a
+  16:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * disclaimer.                        
+  17:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * 
+  18:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Redistributions in binary form must reproduce the above copyright notice, this list of condition
+  19:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * disclaimer in the documentation and/or other materials provided with the distribution.          
+  20:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * 
+  21:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Neither the name of the copyright holders nor the names of its contributors may be used to endor
+  22:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * products derived from this software without specific prior written permission.                  
+  23:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *                                                                              
+  24:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR I
+  25:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTI
+  26:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, IN
+  27:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBS
+  28:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THE
+  29:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
+  30:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                            
+  31:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *                                                                              
+  32:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * To improve the quality of the software, users are encouraged to share modifications, enhancement
+  33:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Infineon Technologies AG dave@infineon.com).                                                    
+  34:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  **************************************************************************************************
+  35:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+  36:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Change History
+  37:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * --------------
+  38:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+  39:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * 2015-02-20:
+  40:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Initial <br>
+  41:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+  42:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * 2015-06-20:
+  43:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Add the declarations for the following APIs: <br>
+  44:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *       XMC_DMA_DisableRequestLine, XMC_DMA_ClearRequestLine, <br>
+  45:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *       XMC_DMA_CH_ClearSourcePeripheralRequest, <br>
+  46:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *       XMC_DMA_CH_ClearDestinationPeripheralRequest <br>
+  47:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Documentation updates <br>
+  48:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Removed version macros and declaration of GetDriverVersion API <br>
+  49:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+  50:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * 2016-10-28:
+  51:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Fix documentation on maximum block size
+  52:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+  53:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * 2017-09-28:
+  54:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Improved documentation and added XMC_DMA_CH_EnableFifo() and XMC_DMA_CH_DisableFifo()
+  55:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+  56:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * 2018-09-18:
+  57:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Added XMC_DMA_CH_GetTransferredData()
+  58:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+  59:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @endcond
+  60:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+  61:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+  62:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #ifndef XMC_DMA_H
+  63:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #define XMC_DMA_H
+  64:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+  65:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /*******************************************************************************
+  66:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * HEADER FILES
+  67:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *******************************************************************************/
+  68:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+  69:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #include "xmc_common.h"
+  70:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+  71:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #if defined (GPDMA0)
+  72:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+  73:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #include "xmc_dma_map.h"
+  74:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+  75:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+  76:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @addtogroup XMClib XMC Peripheral Library
+  77:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @{
+  78:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+  79:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+  80:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+  81:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @addtogroup DMA
+  82:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @brief General purpose DMA (GPDMA) driver for the XMC4000 microcontroller family
+  83:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+  84:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The GPDMA is a highly configurable DMA controller that allows high-speed data transfers
+  85:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * between peripherals and memories. Complex data transfers can be done with minimal
+  86:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * intervention of the processor, making CPU available for other operations.
+  87:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+  88:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * GPDMA provides extensive support for XMC microcontroller peripherals like A/D, D/A
+  89:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * converters and timers. Data transfers through communication interfaces (USIC) using the
+  90:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * GPDMA increase efficiency and parallelism for real-time applications.
+  91:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+  92:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The DMA low level driver provides functions to configure and initialize the GPDMA
+  93:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * hardware peripheral.
+  94:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @{
+  95:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+  96:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+  97:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /*******************************************************************************
+  98:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * MACROS
+  99:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *******************************************************************************/
+ 100:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 101:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #if defined (GPDMA0)
+ 102:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #define XMC_DMA0 ((XMC_DMA_t *)GPDMA0_CH0_BASE) /**< DMA module 0 */
+ 103:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #define XMC_DMA0_NUM_CHANNELS 8
+ 104:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #endif
+ 105:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 106:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #if defined (GPDMA1)
+ 107:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #define XMC_DMA1 ((XMC_DMA_t *)GPDMA1_CH0_BASE) /**< DMA module 1, only available in XMC45xx series
+ 108:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #define XMC_DMA1_NUM_CHANNELS 4
+ 109:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #endif
+ 110:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 111:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /*******************************************************************************
+ 112:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * ENUMS
+ 113:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *******************************************************************************/
+ 114:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 115:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 116:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA transfer types
+ 117:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 118:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_TRANSFER_TYPE
+ 119:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 120:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_SINGLE_BLOCK,                                /**< Single block */
+ 121:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_CONTIGUOUS_DSTADR_RELOAD, /**< Multi-block: src addre
+ 122:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_RELOAD_DSTADR_CONTIGUOUS, /**< Multi-block: src addre
+ 123:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_RELOAD_DSTADR_RELOAD,     /**< Multi-block: src addre
+ 124:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_CONTIGUOUS_DSTADR_LINKED, /**< Multi-block: src addre
+ 125:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_RELOAD_DSTADR_LINKED,     /**< Multi-block: src addre
+ 126:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_LINKED_DSTADR_CONTIGUOUS, /**< Multi-block: src addre
+ 127:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_LINKED_DSTADR_RELOAD,     /**< Multi-block: src addre
+ 128:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_LINKED_DSTADR_LINKED      /**< Multi-block: src addre
+ 129:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_TRANSFER_TYPE_t;
+ 130:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 131:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 132:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA transfer flow modes
+ 133:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 134:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_TRANSFER_FLOW
+ 135:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 136:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_M2M_DMA    = 0x0UL, /**< Memory to memory (DMA flow controller) */
+ 137:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_M2P_DMA    = 0x1UL, /**< Memory to peripheral (DMA flow controller) */
+ 138:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_P2M_DMA    = 0x2UL, /**< Peripheral to memory (DMA flow controller) */
+ 139:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_P2P_DMA    = 0x3UL, /**< Peripheral to peripheral (DMA flow controller) 
+ 140:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_P2M_PER    = 0x4UL, /**< Peripheral to memory (Peripheral flow controlle
+ 141:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_P2P_SRCPER = 0x5UL, /**< Peripheral to peripheral (Source peripheral flo
+ 142:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_M2P_PER    = 0x6UL, /**< Memory to peripheral (Peripheral flow controlle
+ 143:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_P2P_DSTPER = 0x7UL  /**< Peripheral to peripheral (Destination periphera
+ 144:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_TRANSFER_FLOW_t;
+ 145:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 146:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 147:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Valid burst length values
+ 148:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 149:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_BURST_LENGTH
+ 150:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 151:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_BURST_LENGTH_1 = 0x0UL, /**< Burst length: 1 word */
+ 152:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_BURST_LENGTH_4 = 0x1UL, /**< Burst length: 4 words */
+ 153:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_BURST_LENGTH_8 = 0x2UL  /**< Burst length: 8 words */
+ 154:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_BURST_LENGTH_t;
+ 155:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 156:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 157:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Valid transfer width values
+ 158:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 159:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_TRANSFER_WIDTH
+ 160:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 161:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_WIDTH_8  = 0x0UL, /**< 8-bit transfer width */
+ 162:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_WIDTH_16 = 0x1UL, /**< 16-bit transfer width */
+ 163:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_WIDTH_32 = 0x2UL  /**< 32-bit transfer width */
+ 164:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_TRANSFER_WIDTH_t;
+ 165:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 166:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 167:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA address count mode
+ 168:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 169:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_ADDRESS_COUNT_MODE
+ 170:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 171:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_ADDRESS_COUNT_MODE_INCREMENT = 0x0UL, /**< Address count mode: increment */
+ 172:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_ADDRESS_COUNT_MODE_DECREMENT = 0x1UL, /**< Address count mode: decrement */
+ 173:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_ADDRESS_COUNT_MODE_NO_CHANGE = 0x2UL  /**< Address count mode: no change */
+ 174:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_ADDRESS_COUNT_MODE_t;
+ 175:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 176:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 177:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel priorities
+ 178:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 179:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_PRIORITY
+ 180:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 181:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_0 = 0x0UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 0 (low) *
+ 182:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_1 = 0x1UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 1 */
+ 183:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_2 = 0x2UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 2 */
+ 184:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_3 = 0x3UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 3 */
+ 185:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_4 = 0x4UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 4 */
+ 186:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_5 = 0x5UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 5 */
+ 187:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_6 = 0x6UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 6 */
+ 188:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_7 = 0x7UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos  /**< DMA channel priority 7 (high) 
+ 189:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_PRIORITY_t;
+ 190:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 191:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 192:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Source handshake interface
+ 193:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 194:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_SRC_HANDSHAKING
+ 195:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 196:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_SRC_HANDSHAKING_HARDWARE = 0x0UL << GPDMA0_CH_CFGL_HS_SEL_SRC_Pos, /**< Source: hardwa
+ 197:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_SRC_HANDSHAKING_SOFTWARE = 0x1UL << GPDMA0_CH_CFGL_HS_SEL_SRC_Pos  /**< Source: softwa
+ 198:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_SRC_HANDSHAKING_t;
+ 199:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 200:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 201:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Destination handshake interface
+ 202:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 203:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_DST_HANDSHAKING
+ 204:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 205:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_DST_HANDSHAKING_HARDWARE = 0x0UL << GPDMA0_CH_CFGL_HS_SEL_DST_Pos, /**< Destination: h
+ 206:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_DST_HANDSHAKING_SOFTWARE = 0x1UL << GPDMA0_CH_CFGL_HS_SEL_DST_Pos  /**< Destination: s
+ 207:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_DST_HANDSHAKING_t;
+ 208:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 209:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 210:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA hardware handshaking interface
+ 211:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Hardware handshaking available only if DMA is flow controller
+ 212:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 213:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_HARDWARE_HANDSHAKING_IF
+ 214:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 215:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_0 = 0x0UL, /**< Hardware handshaking interface 0 */
+ 216:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_1 = 0x1UL, /**< Hardware handshaking interface 1 */
+ 217:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_2 = 0x2UL, /**< Hardware handshaking interface 2 */
+ 218:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_3 = 0x3UL, /**< Hardware handshaking interface 3 */
+ 219:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_4 = 0x4UL, /**< Hardware handshaking interface 4 */
+ 220:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_5 = 0x5UL, /**< Hardware handshaking interface 5 */
+ 221:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_6 = 0x6UL, /**< Hardware handshaking interface 6 */
+ 222:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_7 = 0x7UL  /**< Hardware handshaking interface 7 */
+ 223:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_t;
+ 224:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 225:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 226:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA events
+ 227:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 228:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_EVENT
+ 229:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 230:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_EVENT_TRANSFER_COMPLETE        = 0x1UL, /**< Transfer complete event */
+ 231:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_EVENT_BLOCK_TRANSFER_COMPLETE  = 0x2UL, /**< Block transfer complete event */
+ 232:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_EVENT_SRC_TRANSACTION_COMPLETE = 0x4UL, /**< Source transaction complete event */
+ 233:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_EVENT_DST_TRANSACTION_COMPLETE = 0x8UL, /**< Destination transaction complete event */
+ 234:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_EVENT_ERROR                    = 0x10UL /**< DMA error event */
+ 235:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_EVENT_t;
+ 236:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 237:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 238:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Transaction types
+ 239:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 240:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_TRANSACTION_TYPE
+ 241:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 242:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSACTION_TYPE_SINGLE, /**< Single DMA transaction */
+ 243:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSACTION_TYPE_BURST   /**< Burst transaction */
+ 244:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_TRANSACTION_TYPE_t;
+ 245:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 246:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 247:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel status values
+ 248:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 249:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_STATUS
+ 250:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 251:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_STATUS_OK,    /**< DMA status OK */
+ 252:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_STATUS_ERROR, /**< DMA status error */
+ 253:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_STATUS_BUSY   /**< DMA is busy */
+ 254:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_STATUS_t;
+ 255:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 256:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /*******************************************************************************
+ 257:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DATA STRUCTURES
+ 258:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *******************************************************************************/
+ 259:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 260:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 261:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel configuration structure <br>
+ 262:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 263:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The structure represents a collection of all hardware registers used
+ 264:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * to configure the DMA channel. It is contained within the ::XMC_DMA_t
+ 265:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * structure. It's registers can be used to configure DMA transfer details
+ 266:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * like source address, destination address, block size, incrementation
+ 267:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * modes and the like.
+ 268:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 269:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  
+ 270:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef struct {
+ 271:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SAR;
+ 272:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED0;
+ 273:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  DAR;
+ 274:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED1;
+ 275:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  LLP;
+ 276:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED2;
+ 277:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  CTLL;
+ 278:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  CTLH;
+ 279:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SSTAT;
+ 280:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED3;
+ 281:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  DSTAT;
+ 282:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED4;
+ 283:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SSTATAR;
+ 284:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED5;
+ 285:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  DSTATAR;
+ 286:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED6;
+ 287:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  CFGL;
+ 288:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  CFGH;
+ 289:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SGR;
+ 290:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED7;
+ 291:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  DSR;
+ 292:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED8;
+ 293:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } GPDMA_CH_t;
+ 294:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 295:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 296:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA device structure <br>
+ 297:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 298:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The structure represents a collection of all hardware registers used
+ 299:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * to configure the GPDMA peripheral on the XMC4000 series of microcontrollers.
+ 300:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The registers can be accessed with ::XMC_DMA0 and ::XMC_DMA1.
+ 301:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 302:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef struct {
+ 303:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   GPDMA_CH_t CH[8];
+ 304:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 305:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  RAWCHEV[10];
+ 306:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  STATUSCHEV[10];
+ 307:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  MASKCHEV[10];
+ 308:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __O  uint32_t  CLEARCHEV[10];
+ 309:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  STATUSGLEV;
+ 310:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED20;
+ 311:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  REQSRCREG;
+ 312:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED21;
+ 313:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  REQDSTREG;
+ 314:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED22;
+ 315:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SGLREQSRCREG;
+ 316:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED23;
+ 317:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SGLREQDSTREG;
+ 318:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED24;
+ 319:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  LSTSRCREG;
+ 320:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED25;
+ 321:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  LSTDSTREG;
+ 322:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED26;
+ 323:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  DMACFGREG;
+ 324:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED27;
+ 325:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  CHENREG;
+ 326:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED28;
+ 327:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  ID;
+ 328:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED29[19];
+ 329:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  TYPE;
+ 330:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  VERSION;
+ 331:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_t;
+ 332:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 333:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /* Anonymous structure/union guard start */
+ 334:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #if defined (__CC_ARM)
+ 335:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   #pragma push
+ 336:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   #pragma anon_unions
+ 337:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #elif defined (__TASKING__)
+ 338:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   #pragma warning 586
+ 339:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #endif
+ 340:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 341:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 342:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel linked list item.
+ 343:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Note: Needs to be word aligned
+ 344:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 345:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef struct XMC_DMA_LLI
+ 346:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 347:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t src_addr;                            /**< Source address */
+ 348:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t dst_addr;                            /**< Destination address */
+ 349:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   struct XMC_DMA_LLI *llp;                      /**< Linked list pointer of type XMC_DMA_LLI_t */
+ 350:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   union
+ 351:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   {
+ 352:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     struct
+ 353:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     {
+ 354:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_interrupt: 1;             /**< Enable interrupts? */
+ 355:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_transfer_width: 3;           /**< Destination transfer width (:: XMC_DMA_CH_TRAN
+ 356:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_transfer_width: 3;           /**< Source transfer width (:: XMC_DMA_CH_TRANSFER_
+ 357:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_address_count_mode: 2;       /**< Destination address count mode (:: XMC_DMA_CH_
+ 358:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_address_count_mode: 2;       /**< Source address count mode (:: XMC_DMA_CH_ADDRE
+ 359:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_burst_length: 3;             /**< Destination burst length (:: XMC_DMA_CH_BURST_
+ 360:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_burst_length: 3;             /**< Source burst length (:: XMC_DMA_CH_BURST_LENGT
+ 361:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_src_gather: 1;            /**< Enable source gather? */
+ 362:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_dst_scatter: 1;           /**< Enable destination scatter? */
+ 363:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t : 1;                             /**< Reserved bits */
+ 364:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t transfer_flow: 3;                /**< DMA transfer flow (:: XMC_DMA_CH_TRANSFER_FLOW
+ 365:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t : 4;                             /**< Reserved bits */
+ 366:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_dst_linked_list: 1;       /**< Enable destination linked list? */
+ 367:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_src_linked_list: 1;       /**< Enable source linked list? */
+ 368:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t : 3;                             /**< Reserved bits */
+ 369:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     };
+ 370:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     uint32_t control;
+ 371:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   };
+ 372:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t block_size;                          /**< Transfer block size */
+ 373:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t src_status;                          /**< Source status */
+ 374:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t dst_status;                          /**< Destination status */
+ 375:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_LLI_t;
+ 376:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 377:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef XMC_DMA_LLI_t **XMC_DMA_LIST_t;         /**< Type definition for a linked list pointer */
+ 378:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 379:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 380:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel configuration structure
+ 381:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 382:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef struct XMC_DMA_CH_CONFIG
+ 383:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 384:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   union
+ 385:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   {
+ 386:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     uint32_t control;
+ 387:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     struct
+ 388:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     {
+ 389:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_interrupt: 1;             /**< Enable interrupts? */
+ 390:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_transfer_width: 3;           /**< Destination transfer width (:: XMC_DMA_CH_TRAN
+ 391:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_transfer_width: 3;           /**< Source transfer width (:: XMC_DMA_CH_TRANSFER_
+ 392:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_address_count_mode: 2;       /**< Destination address count mode (:: XMC_DMA_CH_
+ 393:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_address_count_mode: 2;       /**< Source address count mode (:: XMC_DMA_CH_ADDRE
+ 394:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_burst_length: 3;             /**< Destination burst length (:: XMC_DMA_CH_BURST_
+ 395:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_burst_length: 3;             /**< Source burst length (:: XMC_DMA_CH_BURST_LENGT
+ 396:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_src_gather: 1;            /**< Enable source gather? */
+ 397:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_dst_scatter: 1;           /**< Enable destination scatter? */
+ 398:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t : 1;                             
+ 399:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t transfer_flow: 3;                /**< DMA transfer flow (:: XMC_DMA_CH_TRANSFER_FLOW
+ 400:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t : 9;                             
+ 401:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     };
+ 402:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   };
+ 403:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 404:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t src_addr;                            /**< Source address */
+ 405:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t dst_addr;                            /**< Destination address */
+ 406:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_LLI_t *linked_list_pointer;           /**< Linked list pointer */
+ 407:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   
+ 408:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   union
+ 409:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   {
+ 410:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     uint32_t src_gather_control;
+ 411:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     struct
+ 412:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     {
+ 413:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_gather_interval: 20;         /**< Source gather interval */
+ 414:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_gather_count: 12;            /**< Source gather count */
+ 415:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     };
+ 416:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   };
+ 417:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 418:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   union
+ 419:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   {
+ 420:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     uint32_t dst_scatter_control;
+ 421:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     struct
+ 422:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     {
+ 423:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_scatter_interval: 20;        /**< Destination scatter interval */
+ 424:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_scatter_count: 12;           /**< Destination scatter count */
+ 425:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****     };
+ 426:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   };
+ 427:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   
+ 428:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   uint16_t block_size;                          /**< Block size for DMA controlled transfers [max. 
+ 429:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_t transfer_type;     /**< DMA transfer type (:: XMC_DMA_CH_TRANSFER_TYPE
+ 430:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_t priority;               /**< DMA channel priority (::XMC_DMA_CH_PRIORITY_t)
+ 431:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_SRC_HANDSHAKING_t src_handshaking; /**< DMA source handshaking interface (:: XMC_DMA_C
+ 432:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   uint8_t src_peripheral_request;               /**< Source peripheral request. See xmc_dma_map.h *
+ 433:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_DST_HANDSHAKING_t dst_handshaking; /**< DMA destination handshaking interface (:: XMC_
+ 434:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   uint8_t dst_peripheral_request;               /**< Destination peripheral request. See xmc_dma_ma
+ 435:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_CONFIG_t;
+ 436:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 437:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /* Anonymous structure/union guard end */
+ 438:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #if defined (__CC_ARM)
+ 439:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   #pragma pop
+ 440:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #elif defined (__TASKING__)
+ 441:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   #pragma warning restore
+ 442:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #endif
+ 443:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 444:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 445:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel event handler
+ 446:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 447:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** typedef void (*XMC_DMA_CH_EVENT_HANDLER_t)(XMC_DMA_CH_EVENT_t event);
+ 448:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 449:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /*******************************************************************************
+ 450:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * API PROTOTYPES
+ 451:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *******************************************************************************/
+ 452:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 453:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #ifdef __cplusplus
+ 454:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** extern "C" {
+ 455:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** #endif
+ 456:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 457:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 458:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
+ 459:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @return None
+ 460:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 461:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
+ 462:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Initialize the GPDMA peripheral <br>
+ 463:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 464:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
+ 465:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The function initializes a prioritized list of DMA channels and enables the GPDMA
+ 466:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * peripheral.
+ 467:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 468:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** void XMC_DMA_Init(XMC_DMA_t *const dma);
+ 469:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 470:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 471:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
+ 472:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @return None
+ 473:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 474:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
+ 475:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Enable the GPDMA peripheral <br>
+ 476:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 477:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
+ 478:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The function de-asserts the GPDMA peripheral reset. In addition, it un-gates the
+ 479:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * GPDMA0 peripheral clock for all XMC4000 series of microcontrollers with an exception
+ 480:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * of the XMC4500 microcontroller. The XMC4500 doesn't support gating.
+ 481:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 482:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** void XMC_DMA_Enable(XMC_DMA_t *const dma);
+ 483:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 484:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 485:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
+ 486:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @return None
+ 487:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 488:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
+ 489:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Disable the GPDMA peripheral <br>
+ 490:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 491:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
+ 492:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The function asserts the GPDMA peripheral reset. In addition, it gates the GPDMA0
+ 493:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * peripheral clock for all XMC4000 series of microcontrollers with an exception of
+ 494:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * the XMC4500 microcontroller. The XMC4500 doesn't support gating.
+ 495:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 496:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** void XMC_DMA_Disable(XMC_DMA_t *const dma);
+ 497:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 498:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 499:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
+ 500:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @return bool
+ 501:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 502:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
+ 503:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Check if the GPDMA peripheral is enabled <br>
+ 504:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 505:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
+ 506:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * For the XMC4500 microcontroller, the function checks if the GPDMA module is asserted
+ 507:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * and returns "false" if it is. In addition, it also checks if the clock is gated
+ 508:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * for the other XMC4000 series of microcontrollers. It returns "true" if the peripheral
+ 509:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * is enabled.
+ 510:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 511:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** bool XMC_DMA_IsEnabled(const XMC_DMA_t *const dma);
+ 512:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 513:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 514:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
+ 515:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA event status
+ 516:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 517:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
+ 518:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Get DMA event status <br>
+ 519:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 520:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
+ 521:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns the collective (global) status of GPDMA events. The following
+ 522:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * lists the various DMA events and their corresponding enumeration. The return value
+ 523:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * of this function may then be masked with any one of the following enumerations to
+ 524:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * obtain the status of individual DMA events. <br>
+ 525:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 526:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
+ 527:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Transfer complete -> ::XMC_DMA_CH_EVENT_TRANSFER_COMPLETE                       <br>
+ 528:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Block transfer complete -> ::XMC_DMA_CH_EVENT_BLOCK_TRANSFER_COMPLETE           <br>
+ 529:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Source transaction complete -> ::XMC_DMA_CH_EVENT_SRC_TRANSACTION_COMPLETE      <br>
+ 530:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Destination transaction complete -> ::XMC_DMA_CH_EVENT_DST_TRANSACTION_COMPLETE <br>
+ 531:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA error event -> ::XMC_DMA_CH_EVENT_ERROR                                     <br>
+ 532:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 533:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetEventStatus(XMC_DMA_t *const dma)
+ 534:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
   27              	 .loc 1 534 0
   28              	 .cfi_startproc
   29              	 
@@ -573,11 +573,11 @@
   40              	.LCFI2:
   41              	 .cfi_def_cfa_register 7
   42 0006 7860     	 str r0,[r7,#4]
- 535:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSGLEV);
+ 535:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSGLEV);
   43              	 .loc 1 535 0
   44 0008 7B68     	 ldr r3,[r7,#4]
   45 000a D3F86033 	 ldr r3,[r3,#864]
- 536:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** }
+ 536:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** }
   46              	 .loc 1 536 0
   47 000e 1846     	 mov r0,r3
   48 0010 0C37     	 adds r7,r7,#12
@@ -600,19 +600,19 @@
   66              	 .thumb_func
   68              	XMC_DMA_GetChannelsTransferCompleteStatus:
   69              	.LFB136:
- 537:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 538:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 539:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
- 540:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA transfer complete status
- 541:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 542:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
- 543:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Get transfer complete status <br>
- 544:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 545:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
- 546:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns GPDMA transfer complete interrupt status. <br>
- 547:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 548:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetChannelsTransferCompleteStatus(XMC_DMA_t *const dma)
- 549:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 537:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 538:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 539:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
+ 540:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA transfer complete status
+ 541:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 542:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
+ 543:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Get transfer complete status <br>
+ 544:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 545:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
+ 546:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns GPDMA transfer complete interrupt status. <br>
+ 547:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 548:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetChannelsTransferCompleteStatus(XMC_DMA_t *const dma)
+ 549:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
   70              	 .loc 1 549 0
   71              	 .cfi_startproc
   72              	 
@@ -629,11 +629,11 @@
   83              	.LCFI8:
   84              	 .cfi_def_cfa_register 7
   85 0006 7860     	 str r0,[r7,#4]
- 550:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSCHEV[0]);
+ 550:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSCHEV[0]);
   86              	 .loc 1 550 0
   87 0008 7B68     	 ldr r3,[r7,#4]
   88 000a D3F8E832 	 ldr r3,[r3,#744]
- 551:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** }
+ 551:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** }
   89              	 .loc 1 551 0
   90 000e 1846     	 mov r0,r3
   91 0010 0C37     	 adds r7,r7,#12
@@ -656,19 +656,19 @@
  109              	 .thumb_func
  111              	XMC_DMA_GetChannelsBlockCompleteStatus:
  112              	.LFB137:
- 552:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 553:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 554:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
- 555:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA block complete status
- 556:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 557:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
- 558:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Get block transfer complete status <br>
- 559:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 560:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
- 561:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns GPDMA block transfer complete interrupt status. <br>
- 562:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 563:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetChannelsBlockCompleteStatus(XMC_DMA_t *const dma)
- 564:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 552:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 553:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 554:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
+ 555:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA block complete status
+ 556:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 557:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
+ 558:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Get block transfer complete status <br>
+ 559:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 560:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
+ 561:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns GPDMA block transfer complete interrupt status. <br>
+ 562:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 563:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetChannelsBlockCompleteStatus(XMC_DMA_t *const dma)
+ 564:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
  113              	 .loc 1 564 0
  114              	 .cfi_startproc
  115              	 
@@ -685,11 +685,11 @@
  126              	.LCFI14:
  127              	 .cfi_def_cfa_register 7
  128 0006 7860     	 str r0,[r7,#4]
- 565:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSCHEV[2]);
+ 565:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSCHEV[2]);
  129              	 .loc 1 565 0
  130 0008 7B68     	 ldr r3,[r7,#4]
  131 000a D3F8F032 	 ldr r3,[r3,#752]
- 566:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** }
+ 566:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** }
  132              	 .loc 1 566 0
  133 000e 1846     	 mov r0,r3
  134 0010 0C37     	 adds r7,r7,#12
@@ -712,23 +712,23 @@
  152              	 .thumb_func
  154              	XMC_DMA_GetChannelsSourceTransactionCompleteStatus:
  155              	.LFB138:
- 567:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 568:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 569:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
- 570:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA event status
- 571:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 572:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
- 573:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Get source transaction complete status <br>
- 574:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 575:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
- 576:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns the source transaction complete interrupt status. <br>
- 577:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 578:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Note: </b><br>
- 579:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * If the source peripheral is memory, the source transaction complete interrupt is
- 580:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * ignored.
- 581:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 582:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetChannelsSourceTransactionCompleteStatus(XMC_DMA_t *const dma)
- 583:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 567:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 568:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 569:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
+ 570:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA event status
+ 571:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 572:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
+ 573:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Get source transaction complete status <br>
+ 574:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 575:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
+ 576:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns the source transaction complete interrupt status. <br>
+ 577:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 578:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Note: </b><br>
+ 579:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * If the source peripheral is memory, the source transaction complete interrupt is
+ 580:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * ignored.
+ 581:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 582:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetChannelsSourceTransactionCompleteStatus(XMC_DMA_t *const dma)
+ 583:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
  156              	 .loc 1 583 0
  157              	 .cfi_startproc
  158              	 
@@ -745,11 +745,11 @@
  169              	.LCFI20:
  170              	 .cfi_def_cfa_register 7
  171 0006 7860     	 str r0,[r7,#4]
- 584:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSCHEV[4]);
+ 584:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSCHEV[4]);
  172              	 .loc 1 584 0
  173 0008 7B68     	 ldr r3,[r7,#4]
  174 000a D3F8F832 	 ldr r3,[r3,#760]
- 585:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** }
+ 585:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** }
  175              	 .loc 1 585 0
  176 000e 1846     	 mov r0,r3
  177 0010 0C37     	 adds r7,r7,#12
@@ -772,23 +772,23 @@
  195              	 .thumb_func
  197              	XMC_DMA_GetChannelsDestinationTransactionCompleteStatus:
  198              	.LFB139:
- 586:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 587:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 588:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
- 589:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA event status
- 590:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 591:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
- 592:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Get destination transaction complete status <br>
- 593:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 594:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
- 595:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns the destination transaction complete interrupt status <br>
- 596:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 597:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Note: </b><br>
- 598:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * If the destination peripheral is memory, the destination transaction complete
- 599:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * interrupt is ignored.
- 600:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 601:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetChannelsDestinationTransactionCompleteStatus(XMC_DMA_t *const d
- 602:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 586:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 587:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 588:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
+ 589:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA event status
+ 590:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 591:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
+ 592:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Get destination transaction complete status <br>
+ 593:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 594:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
+ 595:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns the destination transaction complete interrupt status <br>
+ 596:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 597:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Note: </b><br>
+ 598:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * If the destination peripheral is memory, the destination transaction complete
+ 599:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * interrupt is ignored.
+ 600:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 601:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetChannelsDestinationTransactionCompleteStatus(XMC_DMA_t *const d
+ 602:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
  199              	 .loc 1 602 0
  200              	 .cfi_startproc
  201              	 
@@ -805,11 +805,11 @@
  212              	.LCFI26:
  213              	 .cfi_def_cfa_register 7
  214 0006 7860     	 str r0,[r7,#4]
- 603:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSCHEV[6]);
+ 603:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSCHEV[6]);
  215              	 .loc 1 603 0
  216 0008 7B68     	 ldr r3,[r7,#4]
  217 000a D3F80033 	 ldr r3,[r3,#768]
- 604:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** }
+ 604:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** }
  218              	 .loc 1 604 0
  219 000e 1846     	 mov r0,r3
  220 0010 0C37     	 adds r7,r7,#12
@@ -832,19 +832,19 @@
  238              	 .thumb_func
  240              	XMC_DMA_GetChannelsErrorStatus:
  241              	.LFB140:
- 605:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
- 606:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 607:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
- 608:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA error event status
- 609:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 610:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
- 611:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Get DMA error event status <br>
- 612:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 613:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
- 614:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns error interrupt status. <br>
- 615:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 616:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetChannelsErrorStatus(XMC_DMA_t *const dma)
- 617:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 605:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 606:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 607:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
+ 608:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA error event status
+ 609:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 610:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
+ 611:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * Get DMA error event status <br>
+ 612:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 613:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
+ 614:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns error interrupt status. <br>
+ 615:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 616:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetChannelsErrorStatus(XMC_DMA_t *const dma)
+ 617:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** {
  242              	 .loc 1 617 0
  243              	 .cfi_startproc
  244              	 
@@ -861,11 +861,11 @@
  255              	.LCFI32:
  256              	 .cfi_def_cfa_register 7
  257 0006 7860     	 str r0,[r7,#4]
- 618:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSCHEV[8]);
+ 618:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSCHEV[8]);
  258              	 .loc 1 618 0
  259 0008 7B68     	 ldr r3,[r7,#4]
  260 000a D3F80833 	 ldr r3,[r3,#776]
- 619:D:/ghc/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** }
+ 619:D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc\xmc_dma.h **** }
  261              	 .loc 1 619 0
  262 000e 1846     	 mov r0,r3
  263 0010 0C37     	 adds r7,r7,#12
@@ -4819,12 +4819,12 @@
  3462              	.LFE216:
  3464              	 .text
  3465              	.Letext0:
- 3466              	 .file 3 "d:\\dave4\\dave_4-4-2_32bit_2018-02-23\\dave-ide-4.4.2-32bit\\dave-ide-4.4.2-32bit\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
- 3467              	 .file 4 "d:\\dave4\\dave_4-4-2_32bit_2018-02-23\\dave-ide-4.4.2-32bit\\dave-ide-4.4.2-32bit\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
- 3468              	 .file 5 "D:/ghc/4700_motors/Libraries/CMSIS/Infineon/XMC4700_series/Include/XMC4700.h"
- 3469              	 .file 6 "D:/ghc/4700_motors/Libraries/XMCLib/inc/xmc4_scu.h"
- 3470              	 .file 7 "D:/ghc/4700_motors/Libraries/CMSIS/Include/core_cm4.h"
- 3471              	 .file 8 "D:/ghc/4700_motors/Libraries/CMSIS/Infineon/XMC4700_series/Include/system_XMC4700.h"
+ 3466              	 .file 3 "c:\\users\\vere\\downloads\\dave_4-4-2_32bit_2018-02-23\\dave-ide-4.4.2-32bit\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 3467              	 .file 4 "c:\\users\\vere\\downloads\\dave_4-4-2_32bit_2018-02-23\\dave-ide-4.4.2-32bit\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+ 3468              	 .file 5 "D:/ghc/dave_project/4700_motors/Libraries/CMSIS/Infineon/XMC4700_series/Include/XMC4700.h"
+ 3469              	 .file 6 "D:/ghc/dave_project/4700_motors/Libraries/XMCLib/inc/xmc4_scu.h"
+ 3470              	 .file 7 "D:/ghc/dave_project/4700_motors/Libraries/CMSIS/Include/core_cm4.h"
+ 3471              	 .file 8 "D:/ghc/dave_project/4700_motors/Libraries/CMSIS/Infineon/XMC4700_series/Include/system_XMC4700.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 xmc_dma.c
     {standard input}:20     .text.XMC_DMA_GetEventStatus:00000000 $t

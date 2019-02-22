@@ -44,8 +44,8 @@ SECONDARY_SIZE += \
 LIST_FILES = $(addsuffix .o.lst, $(basename $(OBJS))) 
 MAP_FILE = "4700_motors.map"
 
-TOOLCHAIN_ROOT=D:/DAve4/DAVE_4-4-2_32bit_2018-02-23/DAVE-IDE-4.4.2-32Bit/DAVE-IDE-4.4.2-32Bit/eclipse/ARM-GCC-49
-PROJECT_LOC=D:/ghc/4700_motors
+TOOLCHAIN_ROOT=C:/Users/Vere/Downloads/DAVE_4-4-2_32bit_2018-02-23/DAVE-IDE-4.4.2-32Bit/eclipse/ARM-GCC-49
+PROJECT_LOC=D:/ghc/dave_project/4700_motors
 
 # All Target
 all: 4700_motors.elf secondary-outputs
