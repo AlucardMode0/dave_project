@@ -22,7 +22,7 @@
 void delay(void)
 {
 	int i,j=1;
-	for(i=0;i<0xFFFFF;++i)
+	for(i=0;i<0xFFFF;++i)
 		j=0;
 }
 
